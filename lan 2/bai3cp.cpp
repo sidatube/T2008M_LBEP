@@ -34,7 +34,7 @@ int main(){
 		        		if(thang==1){
 			    		days=ngay;
 			    		}else{
-			    			days=(thang-1)/2*61-2;
+			    			days=(thang-1)/2*61-2+ngay;
 							}
 					}
 			}else{
