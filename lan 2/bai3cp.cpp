@@ -57,5 +57,4 @@ int main(){
 	}else{
 		printf("hay nhap lai cho den khi khong thay dong chu nay nua");
 	}
-
 }
