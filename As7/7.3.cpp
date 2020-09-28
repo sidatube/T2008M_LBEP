@@ -1,36 +1,30 @@
 #include <stdio.h>
-int main (){
-	int n,count;
+int main(){
+	int n;
 	printf("Nhap n: ");
 	scanf("%d",&n);
 	int ar[n];
-	bool f=false;
-	do{
-		for(int i=0;i<n;i++){
-			int x;
-			printf("Nhap x: ");
+	for(int i=0;i<n;i++){
+		int x;
+		bool flag;
+	
+		do{
+			flag =false;
+			printf("Nhap ar[%d]: ",i);
 			scanf("%d",&x);
-			if(i==0){
-				ar[i]=x;
-			}else{
-				
-				for(int j=i;j>0;j--){
-					count=0;
-					f=false;
-					if(ar[j-1] !=x){
-						count++;
-					}else{
-						break;
-					}
-				}
-				if(count==1){
-					ar[i]=x;
-				}else if(count==0){
-					f=true;
+			for(int j=0;j<i;j++){
+				if(ar[j]==x){
+					flag =true;
+					break;
 				}
 			}
-		}
-	}while(f);
+			if(flag ==false){
+				ar[i]=x;
+			}
+			
+		}while(flag);
+	}
+	printf("Mang da nhap la:\n");
 	for(int i=0;i<n;i++){
 		printf("%d\t",ar[i]);
 	}

@@ -53,7 +53,7 @@ void dientich(float a,float b, float c){
 	return ;
 }
 //het bai 4.
-void ucln(int a, int b){
+int ucln(int a, int b){
 	if(a>=b){
 		int u;
 		for(int i=1;i<=b;i++){				
@@ -64,7 +64,7 @@ void ucln(int a, int b){
 			}
 		}
 		printf("Uoc chung lon nhat la: %d",u);
-		return;
+		return u;
 	}else{
 		int u;
 		for(int i=1;i<=a;i++){				
@@ -75,34 +75,14 @@ void ucln(int a, int b){
 			}
 		}
 		printf("Uoc chung lon nhat la: %d",u);
-		return;
+		return u;
 	}
 }
 //het bai 5.
 void bcnn(int a,int b){
-	if(a>=b){
-		int u,z;
-		for(int i=1;i<=b;i++){				
-			if(b%i==0){
-				if(a%i==0){
-					u=i;
-				}
-			}
-		}
-		z=a*b/u;
-		printf("Boi chung nho nhat la: %d",z);
-		return;
-	}else{
-		int u,z;
-		for(int i=1;i<=a;i++){				
-			if(a%i==0){
-				if(b%i==0){
-					u=i;
-				}
-			}
-		}
-		z=a*b/u;
-		printf("Boi chung nho nhat la: %d",z);
-		return;
-	}
+	int z;
+	z=a*b/ucln(a,b);
+	printf("Boi chung nho nhat la: %d",z);
+	return;
 }
+
