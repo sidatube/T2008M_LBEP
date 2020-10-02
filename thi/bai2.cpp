@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <cmath>
-float tinhtien(float a,float b){	
-		a+=(a*b/100);
-}
+
 int main(){
 	int c;
 	float a,b,d;
